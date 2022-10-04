@@ -40,9 +40,13 @@ with open(csvpath, encoding='utf-8') as csvfile:
     print(f"The winner is: {name}")
     print("```")
 
-output_path = os.path.join('Resources','output_file.csv')
+output_path = os.path.join('Analysis','output_file.csv')
 
 with open(output_path, 'w') as datafile:
-    csvwrier = csv.writer(datafile)
+    writer = csv.writer(datafile)
 
+    writer.writerow(["```Text"])
+    writer.writerow(["Election Results"]) 
+    writer.writerow(["----------------------------"])
+    writer.writerow(["```"])
     
